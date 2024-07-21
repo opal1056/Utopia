@@ -13,10 +13,6 @@
 <script src="uv/uv.bundle.js"></script>
 <script src="uv/uv.config.js"></script>
 <script>
-function encodeUrl(str){
-  if (!str) return str;
-  return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
-}
 
 window.navigator.serviceWorker.register('./sw.js', {
     scope: /*__uv$config.prefix*/'/service/'
